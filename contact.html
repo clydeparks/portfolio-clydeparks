@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Clyde Parks</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("loaded");
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function(e) {
+          const href = this.getAttribute("href");
+          if (href && !href.startsWith("#") && !this.target) {
+            e.preventDefault();
+            document.body.classList.remove("loaded");
+            setTimeout(() => {
+              window.location.href = href;
+            }, 300);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-container">
+      <div class="brand">Clyde Parks</div>
+      <ul>
+        <li><a class="nav-link" href="index.html">Accueil</a></li>
+        <li><a class="nav-link" href="realisations.html">Réalisations</a></li>
+        <li><a class="nav-link " href="a-propos.html">À propos</a></li>
+        <li><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="contact" style="margin-top: 6rem;">
+    <h2>Contact</h2>
+    <p>Vous pouvez me contacter à : <a href="mailto:contact@clydeparksproduction.com">contact@clydeparksproduction.com</a></p>
+  </section>
+</body>
+</html>
