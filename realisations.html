@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Réalisations - Clyde Parks</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function filter(category) {
+      const items = document.querySelectorAll('.video-item');
+      items.forEach(item => {
+        item.style.display = (category === 'all' || item.dataset.cat === category) ? 'block' : 'none';
+      });
+    }
+  </script>
 </head>
 <body>
   <nav class="top-nav">
     <ul>
+      <li style="font-weight:bold; color:white;">Clyde Parks</li>
       <li><a href="index.html">Accueil</a></li>
       <li><a href="realisations.html">Réalisations</a></li>
       <li><a href="a-propos.html">À propos</a></li>
@@ -16,14 +25,31 @@
     </ul>
   </nav>
 
-  <section id="realisations" style="margin-top: 5rem;">
-    <h2>🎬 Clips</h2>
-    <div class="grid">
-      <a href="https://youtu.be/STq6DmLMX3U" target="_blank"><img src="https://img.youtube.com/vi/STq6DmLMX3U/hqdefault.jpg" alt="Clip 1"></a>
-      <a href="https://youtu.be/FiUGHEY-6Ko" target="_blank"><img src="https://img.youtube.com/vi/FiUGHEY-6Ko/hqdefault.jpg" alt="Clip 2"></a>
-      <a href="https://youtu.be/f_aQnwGlod4" target="_blank"><img src="https://img.youtube.com/vi/f_aQnwGlod4/hqdefault.jpg" alt="Clip 3"></a>
-      <a href="https://youtu.be/7ADZ2dGl5cc" target="_blank"><img src="https://img.youtube.com/vi/7ADZ2dGl5cc/hqdefault.jpg" alt="Clip 4"></a>
-      <a href="https://www.youtube.com/watch?v=Vm-sbCPyZNk" target="_blank"><img src="https://img.youtube.com/vi/Vm-sbCPyZNk/hqdefault.jpg" alt="Clip 5"></a>
+  <section id="realisations" style="margin-top: 6rem;">
+    <h2>🎬 Réalisations</h2>
+    <div class="filter-buttons">
+      <button onclick="filter('all')">Tout</button>
+      <button onclick="filter('clip')">Clips</button>
+      <button onclick="filter('court')">Courts-métrages</button>
+      <button onclick="filter('pub')">Publicités</button>
+      <button onclick="filter('docu')">Documentaires</button>
+    </div>
+    <div class="grid-embed">
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/STq6DmLMX3U" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/FiUGHEY-6Ko" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/f_aQnwGlod4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/7ADZ2dGl5cc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/Vm-sbCPyZNk" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 </body>
