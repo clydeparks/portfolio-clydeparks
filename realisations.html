@@ -12,17 +12,24 @@
         item.style.display = (category === 'all' || item.dataset.cat === category) ? 'block' : 'none';
       });
     }
+
+    function highlightActive(link) {
+      document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+      link.classList.add('active');
+    }
   </script>
 </head>
 <body>
   <nav class="top-nav">
-    <ul>
-      <li style="font-weight:bold; color:white;">Clyde Parks</li>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="realisations.html">Réalisations</a></li>
-      <li><a href="a-propos.html">À propos</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <div class="brand">Clyde Parks</div>
+      <ul>
+        <li><a class="nav-link" href="index.html">Accueil</a></li>
+        <li><a class="nav-link active" href="realisations.html">Réalisations</a></li>
+        <li><a class="nav-link" href="a-propos.html">À propos</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <section id="realisations" style="margin-top: 6rem;">
@@ -49,6 +56,9 @@
       </div>
       <div class="video-item" data-cat="clip">
         <iframe src="https://www.youtube.com/embed/Vm-sbCPyZNk" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="court">
+        <iframe src="https://www.youtube.com/embed/zS7M8iyxtug" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </section>
