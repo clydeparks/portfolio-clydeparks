@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,60 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clyde Parks Production</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Clyde Parks Production</h1>
     <nav>
-      <a href="#apropos">À propos</a>
-      <a href="#projets">Réalisations</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  <section class="hero">
-    <div class="overlay">
-      <h2>Chef opérateur & Réalisateur</h2>
-      <p>Clips, courts-métrages, documentaires & plus</p>
-    </div>
-    <video autoplay muted loop id="bg-video">
-      <source src="video-placeholder.mp4" type="video/mp4" />
-      Votre navigateur ne supporte pas la vidéo.
-    </video>
-  </section>
-  <section id="apropos">
-    <h2>À propos</h2>
-    <p>Placeholder pour la section à propos.</p>
-  </section>
-  <section id="projets">
-    <h2>Réalisations</h2>
-    <div class="categorie">
-      <h3>Clips</h3>
+      <h1>Clyde Parks Production</h1>
       <ul>
-        <li><a href="https://youtu.be/STq6DmLMX3U" target="_blank">Clip 1</a></li>
-        <li><a href="https://youtu.be/FiUGHEY-6Ko" target="_blank">Clip 2</a></li>
-        <li><a href="https://youtu.be/f_aQnwGlod4" target="_blank">Clip 3</a></li>
-        <li><a href="https://youtu.be/7ADZ2dGl5cc" target="_blank">Clip 4</a></li>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+    </nav>
+    <div class="hero">
+      <video autoplay muted loop id="bg-video">
+        <source src="video-placeholder.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay">
+        <h2>Chef opérateur & Réalisateur</h2>
+        <p>Clips, courts-métrages, publicités, documentaires</p>
+      </div>
     </div>
-    <div class="categorie">
-      <h3>Courts-métrages</h3>
-      <p>À venir.</p>
+  </header>
+
+  <section id="realisations">
+    <h2>Mes Réalisations</h2>
+    <div class="categories">
+      <div class="cat">Clips</div>
+      <div class="cat">Courts-métrages</div>
+      <div class="cat">Publicités</div>
+      <div class="cat">Documentaires</div>
     </div>
-    <div class="categorie">
-      <h3>Publicités</h3>
-      <p>À venir.</p>
-    </div>
-    <div class="categorie">
-      <h3>Documentaires</h3>
-      <p>À venir.</p>
+    <div class="grid">
+      <div class="item">Vidéo 1</div>
+      <div class="item">Vidéo 2</div>
+      <div class="item">Vidéo 3</div>
     </div>
   </section>
+
+  <section id="a-propos">
+    <h2>À propos</h2>
+    <p>Texte de présentation placeholder ici.</p>
+  </section>
+
   <section id="contact">
     <h2>Contact</h2>
-    <p>Pour me contacter, envoyez un e-mail à : <strong>contact@clydeparksproduction.com</strong></p>
+    <p>Vous pouvez me contacter à : <a href="mailto:contact@clydeparksproduction.com">contact@clydeparksproduction.com</a></p>
   </section>
+
   <footer>
-    <p>&copy; 2025 Clyde Parks Production. Tous droits réservés.</p>
+    <p>&copy; 2025 Clyde Parks Production</p>
   </footer>
 </body>
 </html>
