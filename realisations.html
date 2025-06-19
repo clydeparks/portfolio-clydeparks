@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réalisations - Clyde Parks</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function filter(category) {
+      const items = document.querySelectorAll('.video-item');
+      items.forEach(item => {
+        item.style.display = (category === 'all' || item.dataset.cat === category) ? 'block' : 'none';
+      });
+    }
+
+    function highlightActive(link) {
+      document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+      link.classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-container">
+      <div class="brand">Clyde Parks</div>
+      <ul>
+        <li><a class="nav-link" href="index.html">Accueil</a></li>
+        <li><a class="nav-link active" href="realisations.html">Réalisations</a></li>
+        <li><a class="nav-link" href="a-propos.html">À propos</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="realisations" style="margin-top: 6rem;">
+    <h2>🎬 Réalisations</h2>
+    <div class="filter-buttons">
+      <button onclick="filter('all')">Tout</button>
+      <button onclick="filter('clip')">Clips</button>
+      <button onclick="filter('court')">Courts-métrages</button>
+      <button onclick="filter('pub')">Publicités</button>
+      <button onclick="filter('docu')">Documentaires</button>
+    </div>
+    <div class="grid-embed">
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/STq6DmLMX3U" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/FiUGHEY-6Ko" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/f_aQnwGlod4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/7ADZ2dGl5cc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/Vm-sbCPyZNk" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="court">
+        <iframe src="https://www.youtube.com/embed/zS7M8iyxtug" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
