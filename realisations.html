@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réalisations - Clyde Parks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="realisations.html" class="active">Réalisations</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <div class="categories">
+      <button class="filter-btn" data-cat="clip">Clips</button>
+      <button class="filter-btn" data-cat="court">Courts-métrages</button>
+      <button class="filter-btn" data-cat="pub">Publicités</button>
+      <button class="filter-btn" data-cat="doc">Documentaires</button>
+    </div>
+
+    <div class="grid">
+      <!-- CLIPS YouTube -->
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/STq6DmLMX3U" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/FiUGHEY-6Ko" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/f_aQnwGlod4" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/7ADZ2dGl5cc" allowfullscreen></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.youtube.com/embed/Vm-sbCPyZNk" allowfullscreen></iframe>
+      </div>
+
+      <!-- CLIPS Instagram -->
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.instagram.com/p/DHwEreSNpNV/embed" frameborder="0"></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.instagram.com/p/DHq45vDNfCw/embed" frameborder="0"></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.instagram.com/p/DHlvFOeN7UD/embed" frameborder="0"></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.instagram.com/p/DHTu-GMNicw/embed" frameborder="0"></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.instagram.com/p/DHG2LR4t_QH/embed" frameborder="0"></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.instagram.com/p/DHBsgeUt28c/embed" frameborder="0"></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.instagram.com/p/DG02aP3tEUH/embed" frameborder="0"></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.instagram.com/p/DGvqez8NZPS/embed" frameborder="0"></iframe>
+      </div>
+      <div class="video-item" data-cat="clip">
+        <iframe src="https://www.instagram.com/p/DGn8NJ_t8-P/embed" frameborder="0"></iframe>
+      </div>
+
+      <!-- COURTS-MÉTRAGES -->
+      <div class="video-item" data-cat="court">
+        <iframe src="https://www.youtube.com/embed/zS7M8iyxtug" allowfullscreen></iframe>
+      </div>
+
+      <!-- DOCUMENTAIRES -->
+      <div class="video-item" data-cat="doc">
+        <iframe src="https://www.instagram.com/p/COdWsRCHzSN/embed" frameborder="0"></iframe>
+      </div>
+      <div class="video-item" data-cat="doc">
+        <iframe src="https://www.instagram.com/p/CNU0iLqnB4T/embed" frameborder="0"></iframe>
+      </div>
+      <div class="video-item" data-cat="doc">
+        <iframe src="https://www.instagram.com/p/CUVS0aolIqu/embed" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const videos = document.querySelectorAll(".video-item");
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const cat = btn.getAttribute("data-cat");
+        videos.forEach(video => {
+          video.style.display = video.getAttribute("data-cat") === cat ? "block" : "none";
+        });
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+      });
+    });
+  </script>
+
+  <script async src="//www.instagram.com/embed.js"></script>
+</body>
+</html>
