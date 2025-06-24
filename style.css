@@ -3,12 +3,6 @@ body {
   font-family: 'Playfair Display', serif;
   background: #0e0e0e;
   color: #fff;
-  animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .transparent-menu {
@@ -122,6 +116,21 @@ nav ul li a.active {
   border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overlay h2 {
+    font-size: 2rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+}
+
 /* === À propos =============================== */
 .a-propos {
   padding: 3rem 2rem;
@@ -154,23 +163,11 @@ nav ul li a.active {
 
 /* === Contact =============================== */
 .contact-section {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
   max-width: 900px;
   margin: auto;
-  padding: 5rem 2rem;
-  color: white;
   text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: gold;
-}
-
-.contact-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
 }
 
 .contact-grid {
@@ -178,6 +175,7 @@ nav ul li a.active {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .contact-info {
@@ -229,19 +227,6 @@ form button:hover {
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .overlay h2 {
-    font-size: 2rem;
-  }
-
-  .overlay p {
-    font-size: 1rem;
-  }
-
   .contact-grid {
     flex-direction: column;
     align-items: center;
