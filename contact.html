@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="transparent-menu">
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="realisations.html">Réalisations</a></li>
@@ -17,9 +17,25 @@
       </ul>
     </nav>
   </header>
-  <section>
+
+  <section class="contact-section">
     <h2>Contact</h2>
-    <p>Vous pouvez me contacter à : <a href="mailto:contact@clydeparksproduction.com">contact@clydeparksproduction.com</a></p>
+    <p>Tu as un projet ? Un clip, une pub ou un film à réaliser ?<br>
+    <strong>Pour un échange rapide, n’hésite pas à m’écrire par mail ou Insta.</strong></p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>Email :</strong> <a href="mailto:contact@clydeparksproduction.com">contact@clydeparksproduction.com</a></p>
+        <p><strong>Instagram :</strong> <a href="https://instagram.com/clydeparksprod" target="_blank">@clydeparksprod</a></p>
+      </div>
+
+      <form action="mailto:contact@clydeparksproduction.com" method="post" enctype="text/plain">
+        <input type="text" name="Nom" placeholder="Ton nom" required />
+        <input type="email" name="Email" placeholder="Ton email" required />
+        <textarea name="Message" placeholder="Ton message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
   </section>
 </body>
 </html>
